@@ -7,18 +7,18 @@ The application is using Spring-boot, spring-unittest, AOP, RestTemplates.
 
 How to run the application directly:
 --------------------------------------
-1- Download the GoEuroTest.jar found in the root directory of the project.
-2- issue command ==> java -jar GoEuroTest.jar Berlin
-3- the above command will request the ReST api for locations that are near to Berlin.
-4- Outout will be dumped into a file with this format "<CITY_NAME>_<FULL_DATETIME> e.g. Berlin_2016-09-06T18:34:21.159.csv" in the location you are running the jar in.
+1- Download the GoEuroTest.jar found in the root directory of the project. <br>
+2- issue command ==> java -jar GoEuroTest.jar Berlin <br>
+3- the above command will request the ReST api for locations that are near to Berlin. <br>
+4- Outout will be dumped into a file with this format "<CITY_NAME>_<FULL_DATETIME> e.g. Berlin_2016-09-06T18:34:21.159.csv" in the location you are running the jar in. <br>
 
 
 How to build the application yourself:
 ---------------------------------------
-1- clone the repository
-2- cd to the project
-3- mvn install
-4- the above will compile, run test, package and install the application.  
+1- clone the repository<br>
+2- cd to the project<br>
+3- mvn install<br>
+4- the above will compile, run test, package and install the application.  <br>
 
 at the end you should see logs like the below:
 
