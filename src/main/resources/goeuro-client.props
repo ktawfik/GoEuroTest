@@ -1,0 +1,2 @@
+goeuro.client.endpoint.url=http://api.goeuro.com/api/v2/position/suggest/en/{CITY_NAME}
+goeuro.client.test_mode=false
