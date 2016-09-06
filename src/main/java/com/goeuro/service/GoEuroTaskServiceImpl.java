@@ -47,7 +47,7 @@ public class GoEuroTaskServiceImpl implements GoEuroTaskService{
 	 * 
 	 */
 	@Override
-	public boolean writeSuggestedLocationsToCSV(String cityName) throws GoEuroClientBaseException {
+	public void writeSuggestedLocationsToCSV(String cityName) throws GoEuroClientBaseException {
 		List<Location> locationsList = getSuggestedLocationsByCityName(cityName);
 		
 		if(CollectionUtils.isEmpty(locationsList)){
@@ -64,6 +64,5 @@ public class GoEuroTaskServiceImpl implements GoEuroTaskService{
 		}
 		String fileName = cityName + "_" + LocalDateTime.now();
 		CSVUtil.writeListToCSV(fileName, locationCsvList, LocationCsvDto.getColumnsList());
-		return true;
 	}
 }

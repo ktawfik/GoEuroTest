@@ -11,6 +11,11 @@ import com.goeuro.model.Location;
  */
 public class LocationMapper implements ModelCsvMapper{
 
+	private static final String ID_COL = "_id";
+	private static final String LATIT_COL = "latitude";
+	private static final String LONG_COL = "longitude";
+	private static final String NAME_COL = "name";
+	private static final String TYPE_COL = "type";
 	/**
 	 * Map City to CityCsvDto object.
 	 * @param c
@@ -31,7 +36,8 @@ public class LocationMapper implements ModelCsvMapper{
 		return cityCsv;
 	}
 	/**
-	 * 
+	 * This method map from Map have key as the field name and the value to a LocationCsvDto
+	 * @return LocationCsvDto
 	 */
 	public  LocationCsvDto map(Map<String, String> nvp){
 		if(nvp == null || nvp.isEmpty()){
@@ -39,15 +45,15 @@ public class LocationMapper implements ModelCsvMapper{
 		}
 		LocationCsvDto obj = new LocationCsvDto();
 		for(Map.Entry<String, String> e : nvp.entrySet()){
-			if("_id".equals(e.getKey())){
+			if(ID_COL.equals(e.getKey())){
 				obj.set_id(Long.parseLong(e.getValue()));
-			}else if("latitude".equals(e.getKey())){
+			}else if(LATIT_COL.equals(e.getKey())){
 				obj.setLatitude(Double.parseDouble(e.getValue()));
-			}else if("longitude".equals(e.getKey())){
+			}else if(LONG_COL.equals(e.getKey())){
 				obj.setLongitude(Double.parseDouble(e.getValue()));
-			}else if("name".equals(e.getKey())){
+			}else if(NAME_COL.equals(e.getKey())){
 				obj.setName(e.getValue());
-			}else if("type".equals(e.getKey())){
+			}else if(TYPE_COL.equals(e.getKey())){
 				obj.setType(e.getValue());
 			}
 		}

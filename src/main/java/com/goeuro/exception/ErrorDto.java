@@ -1,5 +1,10 @@
 package com.goeuro.exception;
 
+/**
+ * 
+ * @author ktawfik
+ * This class represents the DTO the user will get when an exception happened
+ */
 public class ErrorDto {
 
 	private String message;

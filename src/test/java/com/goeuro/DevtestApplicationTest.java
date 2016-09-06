@@ -38,18 +38,6 @@ public class DevtestApplicationTest {
 	
 	@Rule
 	public final ExpectedException exception = ExpectedException.none();
-	
-	@Test
-	@Ignore
-	public void testCommandLineWithInvalidCity() throws Exception{
-		exception.expect(LogicalException.class);
-		exception.expectMessage(GoEuroError.GOEURO_006.getMessage());
-		
-		given(service.writeSuggestedLocationsToCSV(INVALID_CITY_NAME))
-		.willThrow(LogicalException.class);
-		
-		runner.run(INVALID_CITY_NAME);
-	}
 
 	@Test
 	@Ignore
@@ -59,7 +47,7 @@ public class DevtestApplicationTest {
 		
 		given(service.getSuggestedLocationsByCityName(null))
 		.willThrow(LogicalException.class);
-		
+
 		runner.run(null);
 	}
 	

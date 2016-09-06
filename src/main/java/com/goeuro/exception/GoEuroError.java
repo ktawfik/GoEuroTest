@@ -1,7 +1,12 @@
 package com.goeuro.exception;
 
 import org.springframework.http.HttpStatus;
-
+/**
+ * 
+ * @author ktawfik
+ *
+ * This class contains all errors handled by the application, contains (message, type and httpStatus)
+ */
 public enum GoEuroError {
 
 	GOEURO_001("Invalid application Parameters"), 

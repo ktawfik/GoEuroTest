@@ -10,9 +10,10 @@ import java.security.SecureRandom;
 public abstract class GoEuroClientBaseException extends Exception {
 
 	private final GoEuroError error;
-	
+	// this random id will identify the specific Exception and that will be used for further investigations if the exceptions
+	// are dumped into any kind of permenant data source
 	private static final SecureRandom RANDOM = new SecureRandom();
-	
+	// a message to the developer if needed.
 	private String devloperMessage;
 	
 	private final String uniqueIdentifier;
